@@ -85,7 +85,6 @@ const deletePost = keyPost => {
     })
 }
 
-deletePost("MlT4wquD4pxDKO8jqu2")
 
 // 
 
