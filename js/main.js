@@ -1,14 +1,6 @@
 // Funcion create 
 
-let newPost = {
-    imageUrl:"wwww",
-    postTitle:"wwww",
-    postTags:"wwwww",
-    postImageUrl:"wwww",
-    postContent:"www"
-} 
-
-const createPost = (post) => {
+const createPost = (newPost) => {
     $.ajax({
         method: "POST", 
         url: `https://devto-js-default-rtdb.firebaseio.com/posts/.json`, // endpoint de la base de datos
@@ -85,20 +77,19 @@ const deletePost = keyPost => {
     })
 }
 
+// Función para agregar un nuevo post en la base de datos
 
-// 
+$(".btn-publish").click(()=>{
+    console.log($("#form-add .form-control"))
+    let newPost = {}
 
-$(".btn-guardar").click(()=> { //Evento del boton guardar
-    let mentorNuevo={}
-
-    $("#form-add input").each(function(){ // Funcion que trae los valores de cada input y los guarda en un objeto
-        console.log($(this).val())
+    $("#form-add .form-control").each(function(){
         let inputValue = $(this).val()
+        console.log(inputValue)
         console.log($(this).attr("name"))
         let storeProperties = $(this).attr("name")
-        mentorNuevo = {...mentorNuevo,[storeProperties]:inputValue} //spread operator Se puede hacer la propagación y se puede agregar más propiedades {...Objeto, [propiedad que quiero agregar]:valor}
+        newPost = {...newPost,[storeProperties]:inputValue} 
     })
-
-    console.log(mentorNuevo)
-    createMentor(mentorNuevo) //Funcion que agrega a un nuevo mentor 
+    console.log(newPost)
+    createPost(newPost)
 })
