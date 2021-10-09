@@ -1,0 +1,203 @@
+
+
+.aside-right_forem {
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #08090a0d;
+    max-width: 100%;
+    overflow-wrap: normal;
+    justify-content: center;
+    padding: 0 .5rem 0 .5rem;
+    margin: 0 ;
+    overflow-wrap: normal;
+    background-color: inherit;
+
+    .aside-right_forem_img {
+      height: auto;
+      width: 6rem;
+      display: inline;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 0;
+    }
+
+    .aside-right_forem_text {
+      margin-top: -1rem;
+
+      .aside-right_forem_text_bold {
+        font-weight: 700;
+        color:#323ebe;
+      }
+    }
+
+    .join {
+      text-decoration: none;
+      color:#323ebe;
+    }
+  }
+
+  .aside-right_listings {
+    margin-top: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #08090a0d;
+
+    .aside-right_listings-titles {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 1rem;
+
+      .aside-right_listings-title-1 {
+        padding-left: 1.5rem ;
+        font-weight: 700;
+        font-size: 1.25rem;
+
+      }
+
+      .aside-right_listings-title-2 {
+        padding-right: 1.5rem ;
+        font-weight: .8rem;
+        color: #323ebe;
+      }
+    }
+
+    .listings-container {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      margin: 1rem auto;
+
+      .listings-item {
+        margin: .5rem 0;
+        padding: 0;
+        overflow-wrap: normal;
+        border-bottom: 1px solid #21222200;
+        
+
+        &:hover {
+          transition: .2s;
+          background-color: rgba(218, 213, 213, 0.05);
+          p {
+            color: #323ebe;
+          }
+          .autor {
+            color: rgba(0, 0, 0, 0.473);
+          }
+        }
+
+        a {
+          text-decoration: none;
+          overflow-wrap: break-word;
+        }
+
+        p {
+          color: #000;
+          font-weight: 350;
+        }
+
+        .autor {
+          color: rgba(0, 0, 0, 0.473);
+        }
+      }
+    }
+  }
+
+  .aside-right_news {
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #08090a0d;
+    max-width: 85%;
+    overflow-wrap: normal;
+    justify-content: center;
+    padding: .5rem 0 .5rem 0;
+    margin: 0 auto;
+    overflow-wrap: normal;
+    background-color: inherit;
+
+    .aside-right_news-titles {
+      font-weight: 700;
+      font-size: 1.15rem;
+      align-items: flex-end;
+      padding-top: .5rem;  
+
+      &:hover {
+        color: #323ebe;
+        transition: .2s;
+      }
+
+    }
+
+    .news-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 1rem auto;
+
+      .listings-item {
+        margin: .5rem 0;
+        padding: 0;
+        overflow-wrap: normal;
+        border-bottom: .05rem solid #21222200;
+
+        &:hover {
+          transition: .2s;
+          background-color: rgba(218, 213, 213, 0.096);
+          p {
+            color: #323ebe;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          overflow-wrap: break-word;
+        }
+
+        p {
+          color: #000;
+          font-weight: 350;
+        }
+
+        .new {
+          color: rgb(255, 255, 255);
+          background-color: #323ebe;
+          letter-spacing: .001rem;
+          border-radius: 5px;
+          padding:0 2px 1px 1px;
+          font-size: .75rem;
+        }
+      }
+    }
+  }
+
+
+.listingCreate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: .5rem;
+
+  p {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0 0 0.5rem 0;
+
+    &:hover {
+      color: #323ebe;
+      transition: .2s;
+    }
+  }
+}
+
+.card-header-rightnews {
+  padding: 1rem;
+}
+.card-header-rightnews {
+  p {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+}
+
+.btn-news {
+  background-color: #323ebe;
+  color: white;
+}

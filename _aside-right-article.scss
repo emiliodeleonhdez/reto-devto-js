@@ -1,0 +1,57 @@
+.article_logo-aside{
+    width: 45px;
+    height: 45px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    position: absolute;
+}
+
+.card-header {
+    background-color: #009ee0;
+}
+
+.btn-aside-right {
+    background-color: #3b49df;
+    border-style: none;
+    height: 2.5rem;
+    border-radius: 4px;
+    padding: 0 1rem;
+    color: white;
+    font-weight: 600;
+    margin: 2.5rem 1rem 0 1rem;
+}
+
+.card-title-aside-right {
+    margin-left: 4.5rem;
+}
+
+.list-group-flush {
+    list-style: none;
+    li {
+        margin: .5rem 1rem 1rem 0;
+    }
+}
+
+// .text-muted {
+//     font-weight: 700;
+// }
+
+.card-header-moreof {
+
+    p {
+        margin-left: 2rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: .8rem;
+
+        span {
+            color: #3b49df;
+        }
+    }
+
+}
+
+.card-moreof {
+    margin-top: 1.25rem;
+}

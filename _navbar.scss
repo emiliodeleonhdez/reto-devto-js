@@ -1,0 +1,51 @@
+$color-border-input-hover: rgb(59, 73, 223);
+@mixin input-hover {
+  box-shadow: unset;
+  border-bottom-width: .15em;
+  border-right-width: .15em;
+  border-color: $color-border-input-hover;
+  caret-color: $color-border-input-hover;
+}
+@mixin btn-devto {
+  background-color: $color-border-input-hover;
+  border-color: $color-border-input-hover;
+  &:focus {
+    box-shadow: unset;
+  }
+}
+@mixin border-devto($color, $tm-b: 1) {
+  box-shadow: unset;
+  border-top-width: .075em*$tm-b;
+  border-left-width: .075em*$tm-b;
+  border-bottom-width: .15em*$tm-b;
+  border-right-width: .15em*$tm-b;
+  border-color: $color!important;
+  caret-color: $color;
+}
+.navbar .form-inline {
+  max-width: 340px;
+}
+.form-inline__btn-search {
+  right: 0;
+}
+.form-inline__input:focus {
+  @include input-hover;
+}
+
+
+.btn-dev {
+  @include btn-devto;
+}
+.user-menu {
+  @include border-devto(black, 2);
+  min-width: 320px;
+  right: 0;
+}
+.container-user:hover .btn {
+  border-color: gray;
+}
+.container-user:hover .card {
+  visibility: visible!important;
+  z-index: 999;
+}
+// https://webdesign.tutsplus.com/es/tutorials/css-experiments-with-a-search-form-input-and-button--cms-22069

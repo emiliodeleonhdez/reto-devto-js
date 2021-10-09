@@ -1,0 +1,60 @@
+//_articles START//
+.article_logo{
+    /*         border-radius: 50%; */
+            width: 32px;
+            height: 32px;
+        }
+article{
+
+    .tags{
+        font-size: .85rem;
+    }
+    .articles-list_menu{
+        list-style: none;
+    }
+    .articles-author_container{
+        color: gray;
+        p{
+            font-size: 12px;
+        }
+    }
+    .articles-posts_menu{
+        a{
+            color: black;
+
+        }
+    }
+    .post_img_minions{
+        max-width: 100%;
+        height: auto;
+    }
+
+    textarea{
+        max-width: 100%;
+        height: auto;
+    }
+    a:link{
+        text-decoration: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:visited{
+        text-decoration: none;
+    }
+    a:focus,
+    a:hover{
+        color:rgb(50, 62, 190)!important;
+    }
+    .articles-posts_menu{
+        a:hover{
+            background-color:lighten($color: #3b49df , $amount: 30%);
+        }
+    }
+    .articles-reactions{
+        a:hover{
+            background-color:lightgray;
+        }
+    }
+}
+//_articles END//
