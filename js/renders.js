@@ -10,5 +10,5 @@ const renderCards = (postsObjs) => {
 $(window).on("load", 
     setTimeout(function(){
         renderCards( getPosts() )
-    }, 2000)
+    }, 300)
 )
