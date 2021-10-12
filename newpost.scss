@@ -1,3 +1,13 @@
+.container-main-create{
+    width: 1000px;
+ 
+    .txt-post-content{
+        height: 400px;
+    }
+}
+.card-form-newpost{
+    height: 700px;
+}
 .container-new-post{
 
 
@@ -12,6 +22,22 @@
     }
     .title-new-post{
         text-size-adjust: 50px;
+    }
+
+}
+.container-btn{
+    .text-revert{
+        color: gray;
+    }
+    .btn-publish{
+        background-color: rgb(57, 70, 214);
+        border: solid 0px;
+
+    }
+    .btn-save-changes{
+        background-color: rgb(202, 202, 203);
+        border: solid 0px;
+
     }
 }
 

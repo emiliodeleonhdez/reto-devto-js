@@ -1,6 +1,13 @@
-.container-new-post .card {
-  height: 800px;
-  width: 850px;
+.container-main-create {
+  width: 1000px;
+}
+
+.container-main-create .txt-post-content {
+  height: 400px;
+}
+
+.card-form-newpost {
+  height: 700px;
 }
 
 .container-new-post .form-control {
@@ -16,6 +23,20 @@
      -moz-text-size-adjust: 50px;
       -ms-text-size-adjust: 50px;
           text-size-adjust: 50px;
+}
+
+.container-btn .text-revert {
+  color: gray;
+}
+
+.container-btn .btn-publish {
+  background-color: #3946d6;
+  border: solid 0px;
+}
+
+.container-btn .btn-save-changes {
+  background-color: #cacacb;
+  border: solid 0px;
 }
 
 body {
