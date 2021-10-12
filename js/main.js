@@ -81,7 +81,9 @@ const deletePost = keyPost => {
 
 $(".btn-publish").click(()=>{
     console.log($("#form-add .form-control"))
-    let newPost = {}
+    let newPost = {
+        createdAt:Date.now(),
+    }
 
     $("#form-add .form-control").each(function(){
         let inputValue = $(this).val()
@@ -90,6 +92,18 @@ $(".btn-publish").click(()=>{
         let storeProperties = $(this).attr("name")
         newPost = {...newPost,[storeProperties]:inputValue} 
     })
+
     console.log(newPost)
     createPost(newPost)
+})
+
+// get value of selector and print in  +
+
+let tagsSelection = ""
+
+$("select").on("change", function(){
+    tagsSelection += $(this).val() + ", "
+    let inputTags = $(".display-tags").val() + $(this).val() + ", "
+    $(".display-tags").val(inputTags)
+    
 })
