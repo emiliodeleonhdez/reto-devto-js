@@ -39,7 +39,6 @@ let number = 0
 
 let postsArray = []
 
-// https://api-13va-default-rtdb.firebaseio.com/.json
 
 const createPosts = (postObject) => {
     const xhr = new XMLHttpRequest()
@@ -108,7 +107,7 @@ document.getElementById("btn-agregar").addEventListener("click", (event)=> {
   event.preventDefault()
   let newPost = {}
   document.querySelectorAll("form#added-posts input").forEach((input) => {
-    //   console.log(input.name, input.value)
+       console.log(input.name, input.value)
       
       if(!input.value) {
           newPost = null
