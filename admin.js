@@ -58,37 +58,26 @@ const createPosts = (postObject) => {
     xhr.send(JSON.stringify(postObject))
 }
 
-const getPosts = () => {
-    postsArray = []
-    const xhr = new XMLHttpRequest()
-    xhr.addEventListener("readystatechange", () => {
-        if(xhr.readyState === 4) {
-            if(xhr.status === 200) {
-                
-                let response = xhr.responseText
-                let postObject = JSON.parse(response)
-                console.log(postObject)
-      
-                if(postObject) {
-                    postsArray = Object.keys(postObject).map((key) => {
-                        let postObject = postObject[key]
-                        return {...postObject, id:key}
-                    })
-                    printTable()
-                }else {
-                    printTable()
-                    console.log("No hay Posts")
-                }
-                
-            }
-        }
-    })
-    xhr.open("GET", "https://devto-js-default-rtdb.firebaseio.com/posts/.json", true)
 
-    xhr.send()
+const getPosts = () => {
+    let posts
+    $.ajax({
+        method: "GET",
+        url: "https://devto-js-default-rtdb.firebaseio.com/posts/.json",
+        success: response => { 
+            // console.log('response al terminar la peticion',response)
+            products = response
+        },
+        error: error => {
+            console.log(error)
+        },
+        async: false
+    })
+    // console.log(products)
+    return products
 }
 
-const deletePost = (idPostsToDelete) => {
+const deletePost = (idPostToDelete) => {
     const xhr = new XMLHttpRequest()
     xhr.addEventListener("readystatechange", () => {
         if(xhr.readyState === 4) {
@@ -98,12 +87,12 @@ const deletePost = (idPostsToDelete) => {
             }
         }
     })
-    xhr.open("DELETE", `https://devto-js-default-rtdb.firebaseio.com/posts${idPostToDelete}/.json`, true)
+    xhr.open("DELETE", `https://devto-js-default-rtdb.firebaseio.com/posts/${idPostToDelete}.json`, true)
 
     xhr.send()
 }
 
-document.getElementById("btn-agregar").addEventListener("click", (event)=> {
+/*document.getElementById("btn-agregar").addEventListener("click", (event)=> {
   event.preventDefault()
   let newPost = {}
   document.querySelectorAll("form#added-posts input").forEach((input) => {
@@ -118,7 +107,7 @@ document.getElementById("btn-agregar").addEventListener("click", (event)=> {
   })
   if(!newPost) return alert("Campos obligatorios")
   createPost(newPost)
-})
+})*/
 
 
 const createNode = (typeElement, text) => {
@@ -136,9 +125,24 @@ const clickToRemovePost = (event) => {
     deletePost(idPost)
 }
 
+    postsArray= Object.keys(getPosts()).map((key)=>{({id:key})} ) 
+    console.log(postsArray)
+
 const printTable = () => {
     let tBody = document.getElementById("list-posts")
-
+    let response = getPosts()
+    
+    postsArray= Object.keys(response).map((key)=>{
+        
+        let postObject= response[key]
+    
+        return{
+            ...postObject,id:key
+        }   
+    
+    } )
+    
+    console.log(postsArray)
     // tBody.innerHTML = ""
 
     // 
@@ -150,27 +154,33 @@ const printTable = () => {
     }
 
     postsArray.forEach((posts, index) => {
-        let {id, title, datepublished} = posts
+        let {id, postTitle, createdAt} = posts
         let tr = document.createElement("tr")
 
         let tdIndex = createNode("td", index + 1)
-        let tdtitle = createNode("td", title)
-        let tddatepublished = createNode("td", datepublished)
+        let tdTitle = createNode("td", postTitle)
+        let tddatepublished = createNode("td", createdAt)
         let tdButton = document.createElement("td")
         let tdButton2 = document.createElement("td")
 
         let button = createNode("button", "Eliminar")
+        let buttonEditar = createNode("a", "Editar")
+
         button.classList.add("btn", "btn-danger")
+        buttonEditar.classList.add("btn", "btn-info")
 
         button.setAttribute("data-post-id", id)
+        buttonEditar.setAttribute("href","./newpost.html?id="+id)
+
 
         button.addEventListener("click", clickToRemovePost)
 
         tdButton.appendChild(button)
-        tdButton.appendChild(button2)
+        tdButton.appendChild(buttonEditar)
+
 
         tr.appendChild(tdIndex)
-        tr.appendChild(tdtitlePost)
+        tr.appendChild(tdTitle)
         tr.appendChild(tddatepublished)
         tr.appendChild(tdButton)
         tr.appendChild(tdButton2)
@@ -179,7 +189,7 @@ const printTable = () => {
     })
 }
 
-// printTable()
+printTable()
 
 getPosts()
 
