@@ -13,7 +13,7 @@
 
 <body>
 
-  <div class="container">
+ <!-- <div class="container">
     <div class="row">
       <div class="col-12 col-md-6">
         <form id="added-posts" action="" class="border border-rounded p-3">
@@ -29,11 +29,11 @@
             <label for="exampleFormControlInput1" class="form-label">Fecha</label>
             <input required type="text" class="form-control" name="lastName" placeholder="Fecha dd/mm/aaaa">
           </div>
-          <!-- <input type="submit"> -->
+          <input type="submit"> 
           <button type="submit" id="btn-agregar" class="btn btn-primary">Agregar</button>
           <button type="delete" id="btn-eliminar" class="btn btn-primary">Eliminar</button>
-        </form>
-      </div>
+        </form> 
+      </div> -->
       <div class="col-12 col-md-6">
         <table class="table table-striped table-hover mt-3">
           <thead>
@@ -57,11 +57,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
   <script>
     $(document).ready(function () {
-        $('.menuContainer').load('./_navbar.html');
-        $('.aside-left_container').load('./_aside-left.html');
-        $('.aside-right_container').load('./_aside-right.html');
-        $('.articles_container').load('./_articles.html');
-        $('.footer_container').load('./_footer.html');
+        $('.menuContainer').load('./navbar.html');
+        $('.aside-left_container').load('./aside-left.html');
+        $('.aside-right_container').load('./aside-right.html');
+        $('.articles_container').load('./articles.html');
+        $('.footer_container').load('./footer.html');
       });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
@@ -74,7 +74,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   
-    <script src="./js/main.js"></script>
+    <script src="admin.js"></script>
 </body>
 
 </html>
