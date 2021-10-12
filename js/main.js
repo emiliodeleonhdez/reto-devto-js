@@ -93,3 +93,14 @@ $(".btn-publish").click(()=>{
     console.log(newPost)
     createPost(newPost)
 })
+
+// get value of selector and print in  +
+
+let tagsSelection = ""
+
+$("select").on("change", function(){
+    tagsSelection += $(this).val() + ", "
+    let inputTags = $(".display-tags").val() + $(this).val() + ", "
+    $(".display-tags").val(inputTags)
+    
+})
