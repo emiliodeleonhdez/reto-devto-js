@@ -95,6 +95,7 @@ $(".btn-publish").click(()=>{
 
     console.log(newPost)
     createPost(newPost)
+    document.location.href = './index.html' 
 })
 
 // get value of selector and print in  +
