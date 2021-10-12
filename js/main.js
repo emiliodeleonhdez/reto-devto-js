@@ -81,7 +81,9 @@ const deletePost = keyPost => {
 
 $(".btn-publish").click(()=>{
     console.log($("#form-add .form-control"))
-    let newPost = {}
+    let newPost = {
+        createdAt:Date.now(),
+    }
 
     $("#form-add .form-control").each(function(){
         let inputValue = $(this).val()
