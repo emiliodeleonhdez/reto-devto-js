@@ -1,3 +1,126 @@
-.nav-item-left:hover{
-    background-color: rgb(145, 137, 137);
-}
+//START ASIDE LEFT///
+.aside-left_container1{
+    display:flex;
+    flex-direction: column;
+    max-width: 230px;
+    margin-left: 1rem;
+  
+  }
+  .aside-left1-_devCommunity_container{
+    h4{
+      margin-left: 5px;
+      margin:0;
+    }
+    .aside-left_list{
+      list-style: none;
+      padding: 0px;
+      margin-top: 8px;
+      .aside-left_item{
+        text-decoration: none;
+        color:black;
+        .aside-left_image{
+          width: 24px;
+          height: 24px;
+        }
+      }
+  
+    }
+    li{
+      padding: 8px;
+    }
+  }
+  .aside-left_other_container{
+    h4{
+      margin-left: 5px;
+      margin:0;
+      color:black;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .aside-left_list{
+      list-style: none;
+      padding: 0px;
+      margin-top: 8px;
+      .aside-left_item{
+        text-decoration: none;
+        color:black;
+        .aside-left_image{
+          width: 24px;
+          height: 24px;
+        }
+      }
+  
+    }
+    li{
+      padding:8px;
+    }
+  }
+  .aside-left_socialmedia{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+  
+    list-style: none;
+      .aside-left_image_social{
+      fill: gray;
+    }
+  }
+  .aside-left_stickers_container{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 1rem 1rem;
+    width: 220px;
+    height: 120px;
+    .aside-left_image_social{
+      width: 24px;
+      height: 24px;
+    }
+    h4{
+      margin-left: 5px;
+      margin:0;
+    }
+  }
+  .aside-left_stickers_container_img{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    .aside-left_image_social{
+      max-width: 220px;
+      max-height: 330px;
+    }
+  } 
+  #aside-left{
+    li:hover{
+      transition: .2s;
+      background-color: #00000011;
+      a{
+        color: #323ebe;
+      }
+      svg:hover{
+        transition: .2s;
+        fill: black;
+  
+      }
+    }
+  }
+  .aside-left_stickers_container_img{
+    h2{
+      color:rgb(59, 73, 223);
+    }
+  
+  }
+  .aside-left_stickers_container{
+    svg:hover{
+      transition: .2s;
+      background-color: #00000011;
+      fill: black;
+    }
+  }
+  .aside-left_image{
+    vertical-align: bottom;
+    margin-right: 10px;
+  }
+  //FINISH ASIDE LEFT//
