@@ -408,4 +408,8 @@ article .articles-reactions a:hover {
 .card-moreof {
   margin-top: 1.25rem;
 }
+
+#container-newPost {
+  color: blueviolet;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+.container-new-post .card {
+  height: 800px;
+  width: 850px;
+}
+
+.container-new-post .form-control {
+  border: 0px solid;
+}
+
+.container-new-post .form-select {
+  border: 0px solid;
+}
+
+.container-new-post .title-new-post {
+  -webkit-text-size-adjust: 50px;
+     -moz-text-size-adjust: 50px;
+      -ms-text-size-adjust: 50px;
+          text-size-adjust: 50px;
+}
+
+body {
+  background-color: #efefef;
+}
+/*# sourceMappingURL=newpost.css.map */
