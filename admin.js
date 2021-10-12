@@ -170,7 +170,7 @@ const printTable = () => {
         buttonEditar.classList.add("btn", "btn-info")
 
         button.setAttribute("data-post-id", id)
-        buttonEditar.setAttribute("href","./newpost.html?id="+id)
+        buttonEditar.setAttribute("href",".git /newpost.html?id="+id)
 
 
         button.addEventListener("click", clickToRemovePost)
