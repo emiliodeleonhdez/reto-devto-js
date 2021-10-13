@@ -1,9 +1,10 @@
 const renderCards = (postsObjs) => {
     let cardsHTML = ''
-    for (key in postsObjs) {
-        let card = new Cards(postsObjs[key])
+    let properties = Object.keys(postsObjs).reverse();
+    properties.forEach(key =>  {
+        let card = new Cards(key, postsObjs[key])
         cardsHTML += card.cardGenerator()
-    }
+    })
     $('.articles_container article').append(cardsHTML)
 }
 
