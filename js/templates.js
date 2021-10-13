@@ -3,15 +3,18 @@ class Cards {
         postTitle,
         postContent,
         postImgUrl,
-        postTags
+        postTags,
+        createdAt
     }) {
         this.title = postTitle
         this.img = postImgUrl
-        this.tags = postTags
+        this.tags = postTags.substring(0, postTags.length - 2).split(', ')
         this.content = postContent
+        this.createdAt = createdAt
     }
 
     cardGenerator () {
+        console.log(this.tags)
         return `
         <div class="first-card card mb-2">
           ${
@@ -24,17 +27,18 @@ class Cards {
                   <img class="article_logo rounded-circle align-self-center" src="./images/84e49851-d0da-4b98-9483-bb157f9e531f.jpeg" alt="">
                   <div class="col p-0 ml-2">
                     <h6 class="m-0">Tapajyoti Bose</h6>
-                    <p class="m-0">Aug 22 (9 hours ago)</p>
+                    <p class="m-0">(${getTimeAgo(this.createdAt)})</p>
                   </div>
                 </div>
               </div>
             <h5 class="card-title">${this.title}</h5>
             <div class="container tags card-text d-flex p-0 mb-3">
                 <div class="row">
-                  <a class="col" href=""><small class="text-muted">#javascript</small></a>
-                  <a class="col" href=""><small class="text-muted">#begginers</small></a>
-                  <a class="col" href=""><small class="text-muted">#webdev</small></a>
-                  <a class="col" href=""><small class="text-muted">#100daysofcode</small></a>
+                    ${
+                        this.tags.map(tag => {
+                            return `<a class="col" href="#"><small class="text-muted">#${tag}</small></a>`
+                        })
+                    }
                 </div>
             </div>
             <div class="articles-reactions container-fluid">
