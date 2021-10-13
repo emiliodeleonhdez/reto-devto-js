@@ -10,11 +10,11 @@ class Cards {
         this.img = postImgUrl
         this.tags = postTags.substring(0, postTags.length - 2).split(', ')
         this.content = postContent
-        this.createdAt = createdAt
+        this.createdAt = new Date(createdAt)
+        this.months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
     }
 
     cardGenerator () {
-        console.log(this.tags)
         return `
         <div class="first-card card mb-2">
           ${
@@ -27,7 +27,7 @@ class Cards {
                   <img class="article_logo rounded-circle align-self-center" src="./images/84e49851-d0da-4b98-9483-bb157f9e531f.jpeg" alt="">
                   <div class="col p-0 ml-2">
                     <h6 class="m-0">Tapajyoti Bose</h6>
-                    <p class="m-0">(${getTimeAgo(this.createdAt)})</p>
+                    <p class="m-0">${this.months[this.createdAt.getMonth()]} ${this.createdAt.getDate()} (${getTimeAgo(this.createdAt)})</p>
                   </div>
                 </div>
               </div>
